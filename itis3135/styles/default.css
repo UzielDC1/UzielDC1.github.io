@@ -27,6 +27,7 @@ main {
     height: 100%;
     max-width: 800px;
     margin: 0 auto;
+    padding-bottom: 50px;
 }
 
 ul {
@@ -49,6 +50,9 @@ a {
     padding-left: 10px;
 }
 
+main a {
+    color:  #4f5d71;
+}
 
 footer a {
     color: #45a8c4;

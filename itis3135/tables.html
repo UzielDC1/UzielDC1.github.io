@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Tables practice</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="styles/default.css">
+	</head>
+	<body>
+		<header>
+			<h1>Table</h1>
+            <div data-include="components/header.html"></div>
+		</header>
+		<main>
+            <h2>My Tabular Data</h2>
+            <ol>
+                <li>Evelyn Parker</li>
+                <li>Liam Donovan</li>
+                <li>Harper Quinn</li>
+                <li>Maxwell Bennett</li>
+                <li>Zara Collins</li>
+                <li>Oliver Hayes</li>
+                <li>Grace Fletcher</li>
+            </ol>
+            <h2>Employee Data in Simple Table</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Years of Service</th>
+                </tr>
+                <tr>
+                    <td>Evelyn Parker</td>
+                    <td>evelyn.parker@email.com</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Liam Donovan</td>
+                    <td>liam.donovan@email.com</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Harper Quinn</td>
+                    <td>harper.quinn@email.com</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Maxwell Bennett</td>
+                    <td>maxwell.bennett@email.com</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Zara Collins</td>
+                    <td>zara.collins@email.com</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Oliver Hayes</td>
+                    <td>oliver.hayes@email.com</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>Grace Fletcher</td>
+                    <td>grace.fletcher@email.com</td>
+                    <td>2</td>
+                </tr>
+            </table>
+            <h2>My Tabular Data</h2>
+            <ol>
+                <li>Evelyn Parker</li>
+                <li>Liam Donovan</li>
+                <li>Harper Quinn</li>
+                <li>Maxwell Bennett</li>
+                <li>Zara Collins</li>
+                <li>Oliver Hayes</li>
+                <li>Grace Fletcher</li>
+            </ol>
+            <h2>Employee Data in Complex Table</h2>
+            <figure>
+                <figcaption>Employee Information</figcaption>
+                <table class="">
+                    <tr>
+                        <th>Department</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Years of Service</th>
+                        <th>Monthly Salary</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">Marketing</th>
+                        <td>Liam Donovan</td>
+                        <td>liam.donovan@email.com</td>
+                        <td>2</td>
+                        <td>$4200</td>
+                    </tr>
+                    <tr>
+                        <td>Evelyn Parker</td>
+                        <td>evelyn.parker@email.com</td>
+                        <td>5</td>
+                        <td>$5300</td>
+                    </tr>
+                    <tr>
+                        <td>Harper Quinn</td>
+                        <td>harper.quinn@email.com</td>
+                        <td>3</td>
+                        <td>$5100</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Sales</th>
+                        <td>Maxwell Bennett</td>
+                        <td>maxwell.bennett@email.com</td>
+                        <td>7</td>
+                        <td>$6200</td>
+                    </tr>
+                    <tr>
+                        <td>Zara Collins</td>
+                        <td>zara.collins@email.com</td>
+                        <td>4</td>
+                        <td>$4500</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Social Media</th>
+                        <td>Oliver Hayes</td>
+                        <td>oliver.hayes@email.com</td>
+                        <td>6</td>
+                        <td>$5200</td>
+                    </tr>
+                    <tr>
+                        <td>Grace Fletcher</td>
+                        <td>grace.fletcher@email.com</td>
+                        <td>2</td>
+                        <td>$3000</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Total Years of Service</th>
+                        <td>29</td>
+                        <td>$33500</td>
+                    </tr>
+                </table>
+            </figure>
+		</main>
+		<footer>
+			<div data-include="components/footer.html"></div>
+		</footer>
+		<script src="scripts/HTMLInclude.min.js"></script>
+	</body>
+</html>

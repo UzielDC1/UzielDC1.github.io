@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Forms</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="styles/default.css">
+	</head>
+	<body>
+		<header>
+			<h1>Forms</h1>
+            <div data-include="components/header.html"></div>
+		</header>
+		<main>
+            <form action="#" method="POST">
+                <fieldset>
+                    <label for="name-label">Name:</label>
+                    <input required type="text" id="name" placeholder="Name">
+                    <label for="phone">Phone Number:</label>
+                    <input required type="tel" id="phone" placeholder="123-456-7890">
+                    <label for="email">Email Address:</label>
+                    <input required type="email" id="email"placeholder="you@example.com">
+                </fieldset>
+                <fieldset>
+                    <label>Services Interested In:</label>
+                    <label for="design"><input type="checkbox" value="design">Website Design</label>   
+                    <label for="update"><input type="checkbox" value="update">Website Update</label>
+                </fieldset>
+                <fieldset>
+                    <label>Preferred Contact Method:</label>
+                    <label for="emailContact">
+                        <input type="radio" name="contactMethod" value="Email" required>Email
+                    </label>
+                    <label for="phoneContact">
+                        <input type="radio" name="contactMethod" value="Phone">Phone
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="location">Snack preference</label>
+                    <select id="location" name="location" size="1" required>
+                        <option value="" disabled selected>Select one of the following</option>
+                        <option value="sweet">Sweet</option>
+                        <option value="salty">Salty</option>
+                        <option value="sour">Sour</option>
+                        <option value="spicy ">Spicy </option>
+                    </select>
+                </fieldset>
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </form>
+		</main>
+		<footer>
+			<div data-include="components/footer.html"></div>
+		</footer>
+		<script src="scripts/HTMLInclude.min.js"></script>
+	</body>
+</html>

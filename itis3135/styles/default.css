@@ -82,7 +82,7 @@ figure tr:nth-child(odd) {
     background-color: #a1c1cf;
 }
 
-figure tr:first-of-type{
+figure th{
     background-color: #5d6e75;
     color: rgb(220, 222, 224)
 }

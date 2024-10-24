@@ -17,11 +17,11 @@
             <form action="#" method="POST">
                 <fieldset>
                     <label for="name-label">Name:</label>
-                    <input required type="text" id="name" placeholder="Name">
+                    <input required type="text" class="form-input" id="name" placeholder="Name">
                     <label for="phone">Phone Number:</label>
-                    <input required type="tel" id="phone" placeholder="123-456-7890">
+                    <input required type="tel" class="form-input" id="phone" placeholder="123-456-7890">
                     <label for="email">Email Address:</label>
-                    <input required type="email" id="email" placeholder="you@example.com">
+                    <input required type="email" class="form-input" id="email" placeholder="you@example.com">
                 </fieldset>
                 <fieldset>
                     <label>Services Interested In:</label>
@@ -39,7 +39,7 @@
                 </fieldset>
                 <fieldset>
                     <label for="location">Snack preference</label>
-                    <select id="location" name="location" size="1" required>
+                    <select class="form-input" id="location" name="location" size="1" required>
                         <option value="" disabled selected>Select one of the following</option>
                         <option value="sweet">Sweet</option>
                         <option value="salty">Salty</option>
@@ -47,8 +47,8 @@
                         <option value="spicy ">Spicy </option>
                     </select>
                 </fieldset>
-                <button type="reset">Reset</button>
-                <button type="submit">Submit</button>
+                <button id="form-btn" type="reset">Reset</button>
+                <button id="form-btn" type="submit">Submit</button>
             </form>
 		</main>
 		<footer>

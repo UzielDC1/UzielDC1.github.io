@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hobby Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            }
+
+            header, footer {
+                background-color: #444;
+                color: #fff;
+                padding: 1rem;
+                text-align: center;
+            }
+
+            nav {
+                margin: 1rem 0;
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            nav a {
+                color: #fff;
+                background-color: #666;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                text-decoration: none;
+            }
+
+            nav a:hover {
+                background-color: #333;
+            }
+
+            main section {
+                display: none;
+                padding: 1rem;
+                background-color: #fff;
+                border-radius: 5px;
+                margin: 1rem;
+            }
+
+            footer a {
+                color: #fff;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>My Hobby - [Hobby Name]</h1>
+            <nav>
+                <a href="#" onclick="showSection('about')">Abput</a>
+                <a href="#" onclick="showSection('who')">Who</a>
+                <a href="#" onclick="showSection('when')">When</a>
+                <a href="#" onclick="showSection('where')">Where</a>
+                <a href="#" onclick="showSection('how')">How</a>
+                <a href="#" onclick="showSection('why')">Why</a>
+                <a href="#" onclick="showSection('ai-prompts')">AI Prompts</a>
+            </nav>
+        </header>
+        <main>
+            <section id="about">
+                <h2>About</h2>
+                <p>This is the home page for my hobby. Here I explain what the hobby is about.</p>
+                <figure>
+                    <img src="images/your-image.jpg" alt="Description of the image">
+                    <figcaption>Your image description</figcaption>
+                </figure>
+                <p><em>Image prompt: [Include the prompt you used to generate the image]</em></p>
+            </section>
+    
+            <section id="who">
+                <h2>Who</h2>
+                <p>Details about the people or community involved in this hobby.</p>
+                <!-- Add more content here -->
+            </section>
+    
+            <section id="when">
+                <h2>When</h2>
+                <p>Best times or schedules related to the hobby.</p>
+                <!-- Add more content here -->
+            </section>
+    
+            <section id="where">
+                <h2>Where</h2>
+                <p>Best locations to engage in this hobby.</p>
+                <!-- Add more content here -->
+            </section>
+    
+            <section id="how">
+                <h2>How</h2>
+                <p>Instructions or tips on how to get started.</p>
+                <!-- Add more content here -->
+            </section>
+    
+            <section id="why">
+                <h2>Why</h2>
+                <p>Why this hobby is important or beneficial.</p>
+                <!-- Add more content here -->
+            </section>
+    
+            <section id="ai-prompts">
+                <h2>AI Prompts</h2>
+                <p>This section lists all the prompts used for AI-generated content.</p>
+                <!-- Add more content here -->
+            </section>
+        </main>
+        <footer>
+            <p>Designed by <a href="https://yourdesignfirm.com">Your Design Firm</a></p>
+        </footer>
+    
+        <script>
+            function showSection(sectionId) {
+                const sections = document.querySelectorAll('section');
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                });
+                document.getElementById(sectionId).style.display = 'block';
+            }
+        </script>
+    </body>
+</html>

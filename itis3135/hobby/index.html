@@ -79,15 +79,13 @@
     <body>
         <header>
             <h1>Photography</h1>
-            <nav>
-                <a href="#" onclick="showSection('about')">About</a>
-                <a href="#" onclick="showSection('home')">Home</a>
-                <a href="#" onclick="showSection('when')">When</a>
-                <a href="#" onclick="showSection('where')">Where</a>
-                <a href="#" onclick="showSection('gear')">Gear</a>
-                <a href="#" onclick="showSection('why')">Why</a>
-                <a href="#" onclick="showSection('ai-prompts')">AI Prompts</a>
-            </nav>
+            <a href="#" class="nav-link" data-section="about">About</a>
+            <a href="#" class="nav-link" data-section="home">Home</a>
+            <a href="#" class="nav-link" data-section="when">When</a>
+            <a href="#" class="nav-link" data-section="where">Where</a>
+            <a href="#" class="nav-link" data-section="gear">Gear</a>
+            <a href="#" class="nav-link" data-section="why">Why</a>
+            <a href="#" class="nav-link" data-section="ai-prompts">AI Prompts</a>
         </header>
         <main>
             <section id="about">
@@ -177,7 +175,7 @@
         <script>
             function showSection(sectionId) {
                 const sections = document.querySelectorAll('section');
-                sections.forEach(section => {
+                sections.forEach((section) => {
                     section.style.display = 'none';
                 });
                 document.getElementById(sectionId).style.display = 'block';
@@ -185,6 +183,13 @@
             window.onload = function() {
                 showSection('home');
             };
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); 
+                    const section = this.getAttribute('data-section');
+                    showSection(section);
+                });
+            });
         </script>
     </body>
 </html>

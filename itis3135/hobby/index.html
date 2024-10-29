@@ -7,10 +7,10 @@
         <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
         <style>
             body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            margin: 0;
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                color: #333;
+                margin: 0;
             }
 
             header, footer {
@@ -47,6 +47,29 @@
                 margin: 1rem;
             }
 
+            figure {
+                margin: 1.5rem auto;
+                max-width: 50%; 
+                text-align: center;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            figure img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 8px;
+            }
+
+            figcaption {
+                font-size: 0.9rem;
+                color: #555;
+                padding: 0.5rem;
+                background-color: #f9f9f9;
+            }
+
             footer a {
                 color: #fff;
                 text-decoration: underline;
@@ -55,13 +78,13 @@
     </head>
     <body>
         <header>
-            <h1>My Hobby - [Hobby Name]</h1>
+            <h1>Photography</h1>
             <nav>
-                <a href="#" onclick="showSection('about')">Abput</a>
-                <a href="#" onclick="showSection('who')">Who</a>
+                <a href="#" onclick="showSection('about')">About</a>
+                <a href="#" onclick="showSection('home')">Home</a>
                 <a href="#" onclick="showSection('when')">When</a>
                 <a href="#" onclick="showSection('where')">Where</a>
-                <a href="#" onclick="showSection('how')">How</a>
+                <a href="#" onclick="showSection('gear')">Gear</a>
                 <a href="#" onclick="showSection('why')">Why</a>
                 <a href="#" onclick="showSection('ai-prompts')">AI Prompts</a>
             </nav>
@@ -69,52 +92,86 @@
         <main>
             <section id="about">
                 <h2>About</h2>
-                <p>This is the home page for my hobby. Here I explain what the hobby is about.</p>
+                <p>I am a 21 year old photographer based out of North Carolina</p>
                 <figure>
-                    <img src="images/your-image.jpg" alt="Description of the image">
-                    <figcaption>Your image description</figcaption>
+                    <img src="images/DSC_0005.jpg" alt="a view through a window of a plant">
+                    <figcaption>Tranquility</figcaption>
                 </figure>
-                <p><em>Image prompt: [Include the prompt you used to generate the image]</em></p>
+                <p>I am still a beginner photographer but I do enjoy it.</p>
             </section>
     
-            <section id="who">
-                <h2>Who</h2>
-                <p>Details about the people or community involved in this hobby.</p>
-                <!-- Add more content here -->
+            <section id="home">
+                <h2>Home</h2>
+                <h3>Photography</h3>
+                <p>The purpose of this page is to showcase my hobby which is photography</p>
+                <figure>
+                    <img src="images/DSC_0184-HDR.jpg" alt="colorful clouds during sunset">
+                    <figcaption>Colorful sunset</figcaption>
+                </figure>
+                <p>I do a variety of styles but mainly nature photography</p>
             </section>
     
             <section id="when">
                 <h2>When</h2>
-                <p>Best times or schedules related to the hobby.</p>
-                <!-- Add more content here -->
+                <h3>My favorite times/seasons for photography</h3>
+                <ul>
+                    <li>Golden hour</li>
+                    <li>Fall</li>
+                    <li>Spring</li>
+                </ul>
+                <p>It's important to get good lighting when you can</p>
             </section>
     
             <section id="where">
                 <h2>Where</h2>
-                <p>Best locations to engage in this hobby.</p>
-                <!-- Add more content here -->
+                <p>I mainly just take pictures in my hometown</p>
+                <p>Countries I want to visit to take pictures</p>
+                <ul>
+                    <li>Japan</li>
+                    <li>Mexico</li>
+                    <li>South Korea</li>
+                    <li>Australia</li>
+                </ul>
             </section>
     
-            <section id="how">
-                <h2>How</h2>
-                <p>Instructions or tips on how to get started.</p>
-                <!-- Add more content here -->
+            <section id="gear">
+                <h2>My gear</h2>
+                <p>I mainly shoot on a Nikon D5500</p>
+                <figure>
+                    <img src="images/DSC_0006.jpg" alt="picutre of a cat">
+                    <figcaption>Cat</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/DSC_0014.jpg" alt="picture of a flower">
+                    <figcaption>Flower</figcaption>
+                </figure>
             </section>
     
             <section id="why">
                 <h2>Why</h2>
-                <p>Why this hobby is important or beneficial.</p>
-                <!-- Add more content here -->
+                <p>I initially took up photography just because I found it interesting.</p>
+                <p>Photography, for me, is also a way to express myself. I want to show the beauty of the world through my photography</p>
+                <figure>
+                    <img src="images/DSC_0092.jpg" alt="image of the sky">
+                    <figcaption>Sky</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/DSC_0044.jpg" alt="picture of the moon">
+                    <figcaption>Moon</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/DSC_0001.jpg" alt="picture of stars">
+                    <figcaption>Stars</figcaption>
+                </figure>
             </section>
     
             <section id="ai-prompts">
                 <h2>AI Prompts</h2>
-                <p>This section lists all the prompts used for AI-generated content.</p>
-                <!-- Add more content here -->
+                <p>Create the basic html for this (assignment)</p>
             </section>
         </main>
         <footer>
-            <p>Designed by <a href="https://yourdesignfirm.com">Your Design Firm</a></p>
+            <p><em>Page built by <a href="../desideriobuild.com/index.html">DesiderioBuilds</a>&copy;2024</em></p>
         </footer>
     
         <script>
@@ -125,6 +182,9 @@
                 });
                 document.getElementById(sectionId).style.display = 'block';
             }
+            window.onload = function() {
+                showSection('home');
+            };
         </script>
     </body>
 </html>

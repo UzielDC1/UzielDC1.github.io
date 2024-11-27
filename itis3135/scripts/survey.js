@@ -71,10 +71,6 @@ function handleSubmit(event) {
     resetLink.style.display = 'block';
 }
 
-form.addEventListener('submit', handleSubmit);
-form.addEventListener('reset', handleReset);
-addCourseButton.addEventListener('click', addCourse);
-
 function addCourse() {
     const newCourseDiv = document.createElement('div');
     newCourseDiv.classList.add('course-entry');
@@ -107,3 +103,6 @@ resetLink.addEventListener('click', function (event) {
     handleReset();
 });
 
+form.addEventListener('submit', handleSubmit);
+form.addEventListener('reset', handleReset);
+addCourseButton.addEventListener('click', addCourse);

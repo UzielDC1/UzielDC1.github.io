@@ -65,7 +65,7 @@ function decodeMessage() {
 function invokeNightmare() {
     document.body.style.backgroundColor = "black";
     document.body.style.color = "lightgray";
-    document.getElementById("curseMessage").innerHTML = "The Nightmare Curse has been cast.";
+    document.getElementById("curse-message").innerHTML = "The Nightmare Curse has been cast.";
 }
 
 function undoCurse() {

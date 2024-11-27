@@ -63,15 +63,17 @@ function decodeMessage() {
 }
 
 function invokeNightmare() {
-    document.body.style.backgroundColor = "black";
-    document.body.style.color = "lightgray";
-    document.getElementById("curse-message").innerHTML = "The Nightmare Curse has been cast.";
+    document.body.style.backgroundColor = "#0a1a0a"; 
+    document.body.style.color = "#d4d4d4"; 
+    document.getElementById("curse-message").innerHTML = "The Nightmare Curse has taken root.";
+    document.getElementById("curse-message").style.color = "#33ff33";
 }
 
 function undoCurse() {
-    document.body.style.backgroundColor = "#ccdce3";
-    document.body.style.color = "#4d4f5f";
+    document.body.style.backgroundColor = "#121212";
+    document.body.style.color = "#e0e0e0"; 
     document.getElementById("curse-message").innerHTML = "The curse has been lifted... for now.";
+    document.getElementById("curse-message").style.color = "#e0e0e0"; 
 }
 
 document.getElementById("display-name").addEventListener("click", displayName);

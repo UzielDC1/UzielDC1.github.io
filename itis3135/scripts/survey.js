@@ -5,8 +5,6 @@ const coursesContainer = document.getElementById('courses-container');
 const addCourseButton = document.getElementById('addcoursebutton');
 const headerElement = document.querySelector('header');
 
-const originalHeaderContent = headerElement.innerHTML;
-
 resultDiv.style.display = 'none';
 resetLink.style.display = 'none';
 
@@ -97,7 +95,7 @@ function handleReset() {
     resultDiv.style.display = 'none';
     form.style.display = 'block';
     resetLink.style.display = 'none';
-    headerElement.innerHTML = originalHeaderContent;
+    headerElement.innerHTML = `<div data-include="components/header.html"></div>`;
 }
 
 resetLink.addEventListener('click', function (event) {

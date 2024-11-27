@@ -29,7 +29,7 @@ function findPolygon() {
         10: "Decagon"
     };
 
-    if(polygonNames[number]) {
+    if (polygonNames[number]) {
         let polygonName = polygonNames[number];
         alert(`${polygonName}`);
     } else {

@@ -3,6 +3,8 @@ const resultDiv = document.getElementById('result');
 const resetLink = document.getElementById('reset-link');
 const coursesContainer = document.getElementById('courses-container');
 const addCourseButton = document.getElementById('addcoursebutton');
+const tempHeader = document.querySelector('header').innerHTML;
+const headerElement = document.querySelector('header');
 
 resultDiv.style.display = 'none';
 resetLink.style.display = 'none';
@@ -62,13 +64,12 @@ function handleSubmit(event) {
        
     `;
 
-    const headerElement = document.querySelector('header');
-    const mainElement = document.querySelector('main');
     headerElement.innerHTML = headerContent;
-    mainElement.innerHTML = mainContent;
+    resultDiv.innerHTML = mainContent;
 
     form.style.display = 'none';
     resetLink.style.display = 'block';
+    resultDiv.style.display = 'block';
 }
 
 function addCourse() {
@@ -95,6 +96,7 @@ function handleReset() {
     resultDiv.style.display = 'none';
     form.style.display = 'block';
     resetLink.style.display = 'none';
+    headerContent
 }
 
 resetLink.addEventListener('click', function (event) {

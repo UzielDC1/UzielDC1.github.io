@@ -71,7 +71,7 @@ function invokeNightmare() {
 function undoCurse() {
     document.body.style.backgroundColor = "#ccdce3";
     document.body.style.color = "#4d4f5f";
-    document.getElementById("curseMessage").innerHTML = "The curse has been lifted... for now.";
+    document.getElementById("curse-message").innerHTML = "The curse has been lifted... for now.";
 }
 
 document.getElementById("display-name").addEventListener("click", displayName);

@@ -4,6 +4,9 @@ const resetLink = document.getElementById('reset-link');
 const coursesContainer = document.getElementById('courses-container');
 const addCourseButton = document.getElementById('addcoursebutton');
 
+resultDiv.style.display = 'none';
+resetLink.style.display = 'none';
+
 function validateForm() {
     const requiredFields = [
         'name', 'mascot', 'image-caption', 
@@ -27,8 +30,8 @@ function handleSubmit(event) {
 
     const formData = new FormData(form);
     const courses = Array.from(document.querySelectorAll('input[name="courses[]"]'))
-        .map(courseInput => courseInput.value)
-        .filter(course => course.trim() !== '');
+        .map((courseInput) => courseInput.value)
+        .filter((course) => course.trim() !== '');
 
     const imageFile = formData.get('image');
     const imageUrl = imageFile ? URL.createObjectURL(imageFile) : '';

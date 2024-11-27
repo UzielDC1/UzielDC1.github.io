@@ -11,7 +11,7 @@ We're glad you are feeling ${feelinginput}!`;
 }
 
 function findPolygon() {
-    let number = parseFloat(document.getElementById('favoriteNumber').value);
+    let number = parseFloat(document.getElementById('favorite-number').value);
 
     number = Math.abs(Math.round(number));
 
@@ -26,10 +26,10 @@ function findPolygon() {
         7: "Heptagon",
         8: "Octagon",
         9: "Nonagon",
-        10: "Decagon",
+        10: "Decagon"
     };
 
-    if(polygonNames[number]){
+    if(polygonNames[number]) {
         let polygonName = polygonNames[number];
         alert(`${polygonName}`);
     } else {
@@ -73,3 +73,10 @@ function undoCurse() {
     document.body.style.color = "#4d4f5f";
     document.getElementById("curseMessage").innerHTML = "The curse has been lifted... for now.";
 }
+
+document.getElementById("display-name").addEventListener("click", displayName);
+document.getElementById("find-polygon").addEventListener("click", findPolygon);
+document.getElementById("summon-curse").addEventListener("click", summonCurse);
+document.getElementById("decode-message").addEventListener("click", decodeMessage);
+document.getElementById("invoke-nightmare").addEventListener("click", invokeNightmare);
+document.getElementById("undo-curse").addEventListener("click", undoCurse);

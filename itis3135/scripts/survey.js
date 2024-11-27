@@ -11,10 +11,6 @@ addCourseButton.addEventListener('click', addCourse);
 function handleSubmit(event) {
     event.preventDefault();
 
-    if (!validateForm()) {
-        return;
-    }
-
     const formData = new FormData(form);
     const courses = Array.from(document.querySelectorAll('input[name="courses[]"]'))
         .map(courseInput => courseInput.value)
@@ -30,7 +26,7 @@ function handleSubmit(event) {
 
     const mainContent = `
         <h3>Welcome</h3>
-         ${imageUrl ? `<img src="${imageUrl}" alt="${formData.get('imageCaption')}" style="max-width: 100%; margin-top: 20px;">` : ''}
+         ${imageUrl ? `<img src="${imageUrl}" alt="${formData.get('imageCaption')}">` : ''}
         <p>${formData.get('imageCaption')}</p>
         <ul>
             <li>Personal Background: ${formData.get('personalBackground')}</li>
@@ -44,6 +40,7 @@ function handleSubmit(event) {
                 </ul>
             </li>
             <li>Funny/Interesting Item to Remember me by: ${formData.get('funnyThing')}</li>
+             <li>More: ${formData.get('anythingelse')}</li>
         </ul>
        
     `;
@@ -54,7 +51,7 @@ function handleSubmit(event) {
     mainElement.innerHTML = mainContent;
 
     form.style.display = 'none';
-    resetLink.style.display = 'inline';
+    resetLink.style.display = 'block';
 }
 
 function validateForm() {
@@ -68,29 +65,10 @@ function validateForm() {
     for (const fieldId of requiredFields) {
         const field = document.getElementById(fieldId);
         if (!field.value.trim()) {
-            alert(`${fieldId.replace(/([A-Z])/g, ' $1')} is required.`);
-            return false;
+            alert("Please fill out all required fields.");
+            return;
         }
     }
-
-    const agreement = document.getElementById('agreement');
-    if (!agreement.checked) {
-        alert('You must agree to the terms.');
-        return false;
-    }
-
-    const imageInput = document.getElementById('image');
-    if (!imageInput.files.length) {
-        alert('Please upload an image.');
-        return false;
-    }
-
-    const file = imageInput.files[0];
-    if (!['image/png', 'image/jpeg'].includes(file.type)) {
-        alert('Image must be a PNG or JPG.');
-        return false;
-    }
-
     return true;
 }
 
@@ -125,3 +103,4 @@ resetLink.addEventListener('click', function (event) {
     form.reset();
     handleReset();
 });
+

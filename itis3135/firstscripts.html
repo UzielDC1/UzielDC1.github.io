@@ -11,19 +11,36 @@
 	<body>
 		<header>
             <div data-include="components/header.html"></div>
-			<h2>Script</h2>
 		</header>
 		<main>
-			<h3 id="date"></h3>
-            <p>Enter your name: </p>
-            <input id="name">
-            <p>How are you feeling? (one word)</p>
-            <input id="feeling">
-            <button type="button" onclick="displayName()">Submit</button>
-            <p id="name-display"></p>
-            <p>Enter your favorite number from 0-10: </p>
-            <input id="favoriteNumber">
-            <button type="button" onclick="findPolygon()">Submit</button>
+			<section>	
+				<h2>Script</h2>
+				<h3 id="date"></h3>
+				<p>Enter your name: </p>
+				<input id="name">
+				<p>How are you feeling? (one word)</p>
+				<input id="feeling">
+				<button type="button" onclick="displayName()">Submit</button>
+				<p id="name-display"></p>
+				<p>Enter your favorite number from 0-10: </p>
+				<input type="number" min="0" max="10" id="favoriteNumber">
+				<button type="button" onclick="findPolygon()">Submit</button>
+			</section>
+			<section>
+				<button onclick="summonCurse()">Summon a Curse</button>
+				<p id="curse"></p>
+			</section>
+			<section>
+				<h3>Decode the Cryptic Message</h1>
+				<button onclick="decodeMessage()">Reveal the Riddle</button>
+				<p id="message"></p>
+			</section>
+			<section>
+				<h3>Invoke the Nightmare Curse</h1>
+				<button onclick="invokeNightmare()">Cast the Curse</button>
+				<button onclick="undoCurse()">Undo the Curse</button>
+				<p id="curseMessage"></p>
+			</section>
 		</main>
 		<footer>
 			<div data-include="components/footer.html"></div>

@@ -10,45 +10,48 @@
 	<body>
 		<header>
             <div data-include="components/header.html"></div>
-			<h2>BYO Intro</h2>
 		</header>
 		<main>
+			<h2>BYO Intro</h2>
 			<h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
 			<form id="surveyForm">
 				<label for="name">Name:</label>
-				<input type="text" id="name" name="name">
+				<input type="text" id="name" name="name" required>
 		
 				<label for="mascot">Mascot:</label>
-				<input type="text" id="mascot" name="mascot">
+				<input type="text" id="mascot" name="mascot" required>
 		
 				<label for="image">Image (PNG or JPG):</label>
-				<input type="file" id="image" name="image" accept=".png, .jpg, .jpeg">
+				<input type="file" id="image" name="image" accept=".png, .jpg, .jpeg" required>
 		
 				<label for="imageCaption">Image Caption:</label>
-				<input type="text" id="imageCaption" name="imageCaption">
+				<input type="text" id="imageCaption" name="imageCaption" required>
 		
 				<label for="personalBackground">Personal Background:</label>
-				<input type="text" id="personalBackground" name="personalBackground">
+				<input type="text" id="personalBackground" name="personalBackground" required>
 		
 				<label for="professionalBackground">Professional Background:</label>
-				<input type="text" id="professionalBackground" name="professionalBackground">
+				<input type="text" id="professionalBackground" name="professionalBackground" required>
 		
 				<label for="academicBackground">Academic Background:</label>
-				<input type="text" id="academicBackground" name="academicBackground">
+				<input type="text" id="academicBackground" name="academicBackground" required>
 		
 				<label for="webDevBackground">Background in Web Development:</label>
-				<input type="text" id="webDevBackground" name="webDevBackground">
+				<input type="text" id="webDevBackground" name="webDevBackground" required>
 		
 				<label for="primaryPlatform">Primary Computer Platform:</label>
-				<input type="text" id="primaryPlatform" name="primaryPlatform">
+				<input type="text" id="primaryPlatform" name="primaryPlatform" required>
 		
 				<div id="coursesContainer">
 					<label>Courses Currently Taking:</label>
+					<button type="button" id="addCourseButton">Add Course</button>
 				</div>
-				<button type="button" id="addCourseButton">Add Course</button>
 		
 				<label for="funnyThing">Funny Thing?</label>
 				<input type="text" id="funnyThing" name="funnyThing">
+
+				<label for="anythingelse">Anything else?</label>
+				<input type="text" id="anythingelse" name="anythingelse">
 		
 				<label>
 					<input type="checkbox" id="agreement" name="agreement">

@@ -1,12 +1,26 @@
-const form = document.getElementById('surveyForm');
+const form = document.getElementById('survey-form');
 const resultDiv = document.getElementById('result');
-const resetLink = document.getElementById('resetLink');
-const coursesContainer = document.getElementById('coursesContainer');
-const addCourseButton = document.getElementById('addCourseButton');
+const resetLink = document.getElementById('reset-link');
+const coursesContainer = document.getElementById('courses-container');
+const addCourseButton = document.getElementById('addcoursebutton');
 
-form.addEventListener('submit', handleSubmit);
-form.addEventListener('reset', handleReset);
-addCourseButton.addEventListener('click', addCourse);
+function validateForm() {
+    const requiredFields = [
+        'name', 'mascot', 'image-caption', 
+        'personal-background', 'professional-background', 
+        'academic-background', 'webdev-background', 
+        'primary-platform', 'funny-thing'
+    ];
+
+    for (const fieldId of requiredFields) {
+        const field = document.getElementById(fieldId);
+        if (!field.value.trim()) {
+            alert("Please fill out all required fields.");
+            return;
+        }
+    }
+    return true;
+}
 
 function handleSubmit(event) {
     event.preventDefault();
@@ -26,20 +40,20 @@ function handleSubmit(event) {
 
     const mainContent = `
         <h3>Welcome</h3>
-         ${imageUrl ? `<img src="${imageUrl}" alt="${formData.get('imageCaption')}">` : ''}
-        <p>${formData.get('imageCaption')}</p>
+         ${imageUrl ? `<img src="${imageUrl}" alt="${formData.get('image-caption')}">` : ''}
+        <p>${formData.get('image-caption')}</p>
         <ul>
-            <li>Personal Background: ${formData.get('personalBackground')}</li>
-            <li>Professional Background: ${formData.get('professionalBackground')}</li>
-            <li>Background: ${formData.get('academicBackground')}</li>
-            <li>Background in this Subject: ${formData.get('webDevBackground')}</li>
-            <li>Primary Computer Platform: ${formData.get('primaryPlatform')}</li>
+            <li>Personal Background: ${formData.get('personal-background')}</li>
+            <li>Professional Background: ${formData.get('professional-background')}</li>
+            <li>Background: ${formData.get('academic-background')}</li>
+            <li>Background in this Subject: ${formData.get('webdev-background')}</li>
+            <li>Primary Computer Platform: ${formData.get('primary-platform')}</li>
             <li>Courses I'm Taking &amp; Why:
                 <ul>
-                    ${courses.map(course => `<li>${course}</li>`).join('')}
+                    ${courses.map((course) => `<li>${course}</li>`).join('')}
                 </ul>
             </li>
-            <li>Funny/Interesting Item to Remember me by: ${formData.get('funnyThing')}</li>
+            <li>Funny/Interesting Item to Remember me by: ${formData.get('funny-thing')}</li>
              <li>More: ${formData.get('anythingelse')}</li>
         </ul>
        
@@ -54,23 +68,9 @@ function handleSubmit(event) {
     resetLink.style.display = 'block';
 }
 
-function validateForm() {
-    const requiredFields = [
-        'name', 'mascot', 'imageCaption', 
-        'personalBackground', 'professionalBackground', 
-        'academicBackground', 'webDevBackground', 
-        'primaryPlatform', 'funnyThing'
-    ];
-
-    for (const fieldId of requiredFields) {
-        const field = document.getElementById(fieldId);
-        if (!field.value.trim()) {
-            alert("Please fill out all required fields.");
-            return;
-        }
-    }
-    return true;
-}
+form.addEventListener('submit', handleSubmit);
+form.addEventListener('reset', handleReset);
+addCourseButton.addEventListener('click', addCourse);
 
 function addCourse() {
     const newCourseDiv = document.createElement('div');

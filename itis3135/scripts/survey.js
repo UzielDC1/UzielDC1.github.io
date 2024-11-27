@@ -3,7 +3,6 @@ const resultDiv = document.getElementById('result');
 const resetLink = document.getElementById('reset-link');
 const coursesContainer = document.getElementById('courses-container');
 const addCourseButton = document.getElementById('addcoursebutton');
-const headerElement = document.querySelector('header');
 
 resultDiv.style.display = 'none';
 resetLink.style.display = 'none';
@@ -37,12 +36,9 @@ function handleSubmit(event) {
     const imageFile = formData.get('image');
     const imageUrl = imageFile ? URL.createObjectURL(imageFile) : '';
 
-    const headerContent = `
+    const mainContent = `
         <h1>${formData.get('name')}</h1>
         <h2>${formData.get('mascot')}</h2>
-    `;
-
-    const mainContent = `
         <h3>Welcome</h3>
          ${imageUrl ? `<img src="${imageUrl}" alt="${formData.get('image-caption')}">` : ''}
         <p>${formData.get('image-caption')}</p>
@@ -63,7 +59,6 @@ function handleSubmit(event) {
        
     `;
 
-    headerElement.innerHTML = headerContent;
     resultDiv.innerHTML = mainContent;
 
     form.style.display = 'none';
@@ -95,7 +90,6 @@ function handleReset() {
     resultDiv.style.display = 'none';
     form.style.display = 'block';
     resetLink.style.display = 'none';
-    headerElement.innerHTML = `<div data-include="components/header.html"></div>`;
 }
 
 resetLink.addEventListener('click', function (event) {

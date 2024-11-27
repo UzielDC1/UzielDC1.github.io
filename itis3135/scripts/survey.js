@@ -4,7 +4,6 @@ const resetLink = document.getElementById('reset-link');
 const coursesContainer = document.getElementById('courses-container');
 const addCourseButton = document.getElementById('addcoursebutton');
 const tempHeader = document.querySelector('header').innerHTML;
-const headerElement = document.querySelector('header');
 
 resultDiv.style.display = 'none';
 resetLink.style.display = 'none';
@@ -64,6 +63,7 @@ function handleSubmit(event) {
        
     `;
 
+    const headerElement = document.querySelector('header');
     headerElement.innerHTML = headerContent;
     resultDiv.innerHTML = mainContent;
 
@@ -88,7 +88,6 @@ function addCourse() {
         coursesContainer.removeChild(newCourseDiv);
     };
     newCourseDiv.appendChild(deleteButton);
-
     coursesContainer.appendChild(newCourseDiv);
 }
 
@@ -96,7 +95,6 @@ function handleReset() {
     resultDiv.style.display = 'none';
     form.style.display = 'block';
     resetLink.style.display = 'none';
-    headerContent
 }
 
 resetLink.addEventListener('click', function (event) {

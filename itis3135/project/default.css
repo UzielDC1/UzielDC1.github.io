@@ -32,12 +32,11 @@ header img {
   height: 60px;
 }
 
-nav { 
-  min-width: 50%;  
+nav {  
   display: flex;  
   justify-content: space-between; 
   text-align: center;
-  max-width: 600px;
+  width: 600px;
   padding: 20px;
 }
 
@@ -49,6 +48,15 @@ nav a {
 
 nav a:hover {
   color: #929292;
+}
+
+@media (max-width: 600px){
+  nav {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 main {

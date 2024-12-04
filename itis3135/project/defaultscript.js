@@ -19,19 +19,22 @@ document.querySelectorAll('.nav-link').forEach((link) => {
 });
 
 let slideIndex = 0;
-showSlides();
 
 function showSlides() {
     let slides = document.querySelectorAll(".slide");
-    slides.forEach(slide => slide.style.display = "none");
+    slides.forEach((slide) => slide.style.display = "none");
     slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }
+    if (slideIndex > slides.length) { 
+        slideIndex = 1; 
+    }
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 3000); 
 }
 
+showSlides();
+
 const collapsibles = document.querySelectorAll('.collapsible');
-collapsibles.forEach(button => {
+collapsibles.forEach((button) => {
   button.addEventListener('click', () => {
     button.classList.toggle('active');
     const content = button.nextElementSibling;

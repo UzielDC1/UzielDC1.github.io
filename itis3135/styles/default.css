@@ -31,6 +31,7 @@ h1 {
 }
 
 main {
+    box-sizing: border-box;
     flex-grow: 1;
     max-width: 700px;
     margin: 20px auto;
@@ -111,6 +112,7 @@ figure th {
 }
 
 form {
+    box-sizing: border-box;
     background-color: #1c1c1c;
     border: 2px solid #ff4444;
     border-radius: 15px;
@@ -136,6 +138,7 @@ label {
 
 input[type="text"],
 .form-input {
+    box-sizing: border-box;
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -145,6 +148,7 @@ input[type="text"],
 }
 
 .form-btn {
+    box-sizing: border-box;
     display: block;
     width: 100%;
     padding: 15px;
@@ -181,14 +185,6 @@ section {
 }
 
 @media only screen and (max-width: 480px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    body {
-        font-size: 0.9rem;
-    }
-
     form {
         width: 100%;
     }

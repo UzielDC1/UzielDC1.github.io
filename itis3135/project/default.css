@@ -1,18 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Source Serif 4", serif;
   background-color: #ededed;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 header {
+  box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -23,16 +21,12 @@ header {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
 }
 
-header h1 {
-  display: flex;
-  align-items: center;
-}
-
 header img {
   height: 60px;
 }
 
 nav {  
+  box-sizing: border-box;
   display: flex;  
   justify-content: space-between; 
   text-align: center;
@@ -46,16 +40,25 @@ nav a {
   width: 110px;
 }
 
+nav a:first-of-type{
+  text-align: right;
+}
+
 nav a:hover {
   color: #929292;
 }
 
 @media (max-width: 600px){
   nav {
+    box-sizing: border-box;
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  nav a:first-of-type {
+    text-align: center;
   }
 }
 
@@ -65,11 +68,13 @@ main {
 }
 
 section {
+  box-sizing: border-box;
   padding: 50px 0;
   text-align: center;
 }
 
 .slideshow-container {
+  box-sizing: border-box;
   position: relative;
   max-width: 80%;
   margin: auto;
@@ -97,6 +102,7 @@ section {
 }
 
 footer {
+  box-sizing: border-box;
   background-color: #041a41;
   color: white;
   text-align: center;
@@ -113,11 +119,36 @@ footer a:hover {
   text-decoration: underline;
 }
 
-footer li {
+li {
   list-style-type: none;
 }
 
+#home .content {
+  display: none;
+}
+
+.collapsible {
+  box-sizing: border-box;
+  background-color: #041a41;  
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 50%;
+  border: none;
+  text-align: left;
+  font-size: 18px;
+}
+
+.collapsible:hover {
+  background-color: #123c85;
+}
+
+.collapsible .active {
+  background-color: #123c85;
+}
+
 #about {
+  box-sizing: border-box;
   text-align: left;
   padding: 50px;
   background-color: white; 
@@ -125,10 +156,6 @@ footer li {
   box-shadow: #64646f33 0px 7px 29px 0px; 
   margin: 20px auto;
   max-width: 800px;
-}
-
-li {
-  list-style-type : lower-roman;
 }
 
 #meet {
@@ -139,6 +166,7 @@ li {
 }
 
 .team-member {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -153,11 +181,6 @@ li {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 8px #585858;
-}
-
-.team-member .info {
-  max-width: 60%;
-  text-align: left;
 }
 
 .reverse {
@@ -186,6 +209,7 @@ li {
 }
 
 .event {
+  box-sizing: border-box;
   background-color: white;
   padding: 10px;
   margin: 10px auto;
@@ -201,12 +225,14 @@ li {
 }
 
 #gallery {
+  box-sizing: border-box;
   background-color: white;
   padding: 40px 0;
   text-align: center;
 }
 
 .gallery-grid {
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
